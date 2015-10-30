@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+<RelativeLayout
+        android:id="@+id/workshopsheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/list_selector"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/workshoptextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/eventTime"
+            android:text="The pillars without whom Samhita would not have been possible!"
+            android:textColor="#040404"
+            android:textSize="12dip"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/grid_view_credits"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/giveFeedBack"
+        android:layout_below="@+id/workshopsheader"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" >
+ 
+    </GridView>
+     <TextView
+         android:id="@+id/giveFeedBack"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/grid_view_credit"
+         android:layout_alignParentLeft="true"
+         android:layout_above="@+id/creditsfooter"
+         android:text="Please give us your Valuble FeedBack" />
+     <RelativeLayout
+          android:id="@+id/creditsfooter"
+        style="@style/FooterBar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <EditText
+            android:id="@+id/feedBackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/sendButton"
+            android:ems="10"
+            android:inputType="textMultiLine" >
+        </EditText>
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text=" Send " />
+
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

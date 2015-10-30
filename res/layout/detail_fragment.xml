@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/insidelayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/list_selector"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/eventCover"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/b1" />
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:shadowColor="#D8D8D8"
+            android:shadowRadius="8"
+            android:text="*Event Title*"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerLayout"
+        android:layout_below="@+id/insidelayout" >
+
+        <TextView
+            android:id="@+id/eventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="*Event Time*"
+            android:textColor="#000000"
+            android:textStyle="italic" />
+
+        <ScrollView
+            android:id="@+id/scroller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/booklayout"
+            android:layout_below="@+id/eventTime"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp" >
+
+            <TextView
+                android:id="@+id/eventDesc"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                android:text="*Event description*"
+                android:textColor="#000000" />
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/booklayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/scroller"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/scroller" >
+
+            <Button
+                android:id="@+id/paybutton"
+                style="@style/BookButton"
+                
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/dummy"
+                android:text="Book Here" />
+
+			<TextView
+			    android:id="@+id/dummy"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerHorizontal="true"
+			    android:text=" " />
+
+            <Button
+                android:id="@+id/devicebutton"
+                style="@style/BookButton"
+                android:layout_alignBaseline="@+id/paybutton"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/dummy"
+                android:text="Share" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footerLayout"
+        style="@style/FooterBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <RelativeLayout
+            android:id="@+id/smsbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <ImageView
+                android:id="@+id/callButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="45dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sms" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/callbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/smsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:maxHeight="45dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/organizer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Organizer name"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/organizer"
+            android:gravity="center"
+            android:text="+91-9677767721"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

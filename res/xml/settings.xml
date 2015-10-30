@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+   
+    <CheckBoxPreference 
+        android:title="Vibrate in Normal Mode"
+         android:key="vibrateswitch"
+         android:defaultValue="true"/>
+    
+    <RingtonePreference 
+        android:ringtoneType="notification"
+         android:title="Notification Sound"
+         android:defaultValue="content://settings/system/notification_sound"
+          android:key="notifsound"
+           android:showSilent="false"/>
+    
+    
+
+</PreferenceScreen>

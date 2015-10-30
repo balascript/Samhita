@@ -2,6 +2,7 @@
 The official Android application for the National level Technical symposium of ITA, MIT Anna University
 
 This repo contains the source of the Samhita'14 Android App.
+The Demo of the App is at http://goo.gl/x2a0dM 
 The features of the app:
 1 Full Event Details
 
